@@ -20,11 +20,10 @@ e1 = tk.Entry(frm1)
 e1.pack(padx = 2,pady = 3)
 
 def method1():
-    if e1.get().isdigit():
-        yoc = int(e1.get())
-        caldr1 = cd.Day(yoc)
+    yoc = int(e1.get())
+    caldr1 = cd.calendar(yoc)
 
-        lb3.config(text = caldr1)
+    lb3.config(text = caldr1,font = "Consolas 8 bold")
 
 btn1 = tk.Button(w1,text = 'Generate Calendar',font = ('Fira Code',10,'bold'),command = method1)
 btn1.pack()
